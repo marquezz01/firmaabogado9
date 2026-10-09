@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derecho Administrativo | Tu Firma Legal</title>
+    <!-- Favicon / Ícono de pestaña y barra de navegación al buscar -->
+    <link rel="icon" type="image/x-icon" href="../../img/logo-abogados-icono.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/logo-abogados-icono.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        /* Inner hero styles moved to inline HTML */
+        
+        /* Layout specific styles */
+        .content-section { padding: var(--section-padding); }
+        .grid-2-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .grid-3-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
+        .grid-layout { display: grid; grid-template-columns: 2.5fr 1fr; gap: 4rem; }
+        
+        /* Cards & Features */
+        .feature-card { background: var(--color-bg-white); padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border-top: 4px solid var(--color-accent); transition: var(--transition); height: 100%;}
+        .feature-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .feature-icon { font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1.5rem; }
+        
+        /* Blog Cards */
+        .blog-card { background: var(--color-bg-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); height: 100%;}
+        .blog-img { width: 100%; height: 250px; object-fit: cover; }
+        .blog-content { padding: 2rem; }
+        .blog-date { color: var(--color-accent); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; display: block; }
+        
+        /* Forms */
+        .contact-form { display: flex; flex-direction: column; gap: 1.5rem; background: var(--color-bg-white); padding: 3rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+        .form-group input, .form-group textarea { width: 100%; padding: 1rem; border: 1px solid #e2e8f0; border-radius: var(--radius-md); font-family: var(--font-body); }
+        
+        /* Administrative Modern Institutional Layout */
+        .admin-lead-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.75rem;
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 8px 24px -6px rgba(15, 23, 42, 0.05);
+            margin-bottom: 3.5rem;
+        }
+        .service-category-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            background: rgba(194, 147, 82, 0.12);
+            color: #92672e;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(194, 147, 82, 0.28);
+        }
+        .service-detail-title {
+            font-size: clamp(2.2rem, 3.4vw, 2.8rem);
+            color: var(--color-primary);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+        }
+        .service-lead-paragraph {
+            font-size: 1.12rem;
+            line-height: 1.85;
+            color: #475569;
+            margin-bottom: 2rem;
+        }
+
+        .admin-media-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.18);
+        }
+        .admin-panoramic-img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .admin-media-wrapper:hover .admin-panoramic-img {
+            transform: scale(1.02);
+        }
+        .admin-stats-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 70%, transparent 100%);
+            padding: 2rem 2rem 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+        .admin-stat-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #ffffff;
+        }
+        .admin-stat-item i {
+            font-size: 1.75rem;
+            color: var(--color-accent);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem;
+            border-radius: 12px;
+            border: 1px solid rgba(194, 147, 82, 0.3);
+        }
+        .stat-title {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .stat-sub {
+            display: block;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        /* Actions Section */
+        .admin-actions-section {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 8px 24px -6px rgba(15, 23, 42, 0.05);
+        }
+        .sub-label {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-accent);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+        .service-section-title {
+            font-size: 2rem;
+            color: var(--color-primary);
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+        .admin-actions-desc {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+        }
+
+        .admin-pillars-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .admin-action-card {
+            background: #f8fafc;
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: 20px;
+            padding: 2.25rem 2rem;
+            transition: all 0.35s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .admin-action-card:hover {
+            transform: translateY(-6px);
+            background: #ffffff;
+            border-color: rgba(194, 147, 82, 0.4);
+            box-shadow: 0 16px 32px -6px rgba(15, 23, 42, 0.1);
+        }
+        .featured-admin-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border-color: rgba(194, 147, 82, 0.35);
+            box-shadow: 0 8px 24px -4px rgba(194, 147, 82, 0.12);
+        }
+        .action-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+        .action-card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: rgba(15, 23, 42, 0.06);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            border: 1px solid rgba(15, 23, 42, 0.12);
+        }
+        .action-card-icon.icon-gold {
+            background: rgba(194, 147, 82, 0.15);
+            color: var(--color-accent);
+            border-color: rgba(194, 147, 82, 0.35);
+        }
+        .action-card-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+            color: var(--color-text-muted);
+            margin-bottom: 0.2rem;
+        }
+        .action-card-badge.badge-gold {
+            color: var(--color-accent);
+        }
+        .action-card-meta h4 {
+            font-size: 1.35rem;
+            color: var(--color-primary);
+            font-weight: 800;
+        }
+        .action-card-text {
+            font-size: 0.98rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .action-card-checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: auto;
+        }
+        .check-item {
+            font-size: 0.88rem;
+            color: #334155;
+            font-weight: 600;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            line-height: 1.4;
+        }
+        .check-item i {
+            color: var(--color-accent);
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        /* Bloque Metodología en Azul Marino Corporativo */
+        .admin-actions-dark {
+            background: linear-gradient(145deg, #090e1a 0%, #0f172a 60%, #17243b 100%) !important;
+            border: 1px solid rgba(194, 147, 82, 0.32) !important;
+            box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.35) !important;
+            position: relative;
+            overflow: hidden;
+        }
+        .admin-actions-dark::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-accent), #f0d090);
+        }
+        .admin-actions-dark .sub-label {
+            color: #e0bc87 !important;
+        }
+        .admin-actions-dark .service-section-title {
+            color: #ffffff !important;
+        }
+        .admin-actions-dark .admin-actions-desc {
+            color: #cbd5e1 !important;
+        }
+        .admin-actions-dark .admin-action-card {
+            background: rgba(255, 255, 255, 0.04) !important;
+            border: 1px solid rgba(194, 147, 82, 0.22) !important;
+            box-shadow: none;
+        }
+        .admin-actions-dark .admin-action-card:hover {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border-color: rgba(194, 147, 82, 0.45) !important;
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.45) !important;
+        }
+        .admin-actions-dark .featured-admin-card {
+            background: rgba(194, 147, 82, 0.08) !important;
+            border-color: rgba(194, 147, 82, 0.35) !important;
+            box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.25) !important;
+        }
+        .admin-actions-dark .featured-admin-card:hover {
+            background: rgba(194, 147, 82, 0.13) !important;
+            border-color: rgba(194, 147, 82, 0.55) !important;
+        }
+        .admin-actions-dark .action-card-icon {
+            background: rgba(194, 147, 82, 0.18) !important;
+            color: #e0bc87 !important;
+            border: 1px solid rgba(194, 147, 82, 0.35) !important;
+        }
+        .admin-actions-dark .admin-action-card:hover .action-card-icon {
+            background: var(--color-accent) !important;
+            color: #0f172a !important;
+            box-shadow: 0 6px 18px rgba(194, 147, 82, 0.35);
+        }
+        .admin-actions-dark .action-card-icon.icon-gold {
+            background: rgba(194, 147, 82, 0.25) !important;
+            color: #f5d79e !important;
+            border-color: rgba(194, 147, 82, 0.5) !important;
+        }
+        .admin-actions-dark .action-card-badge {
+            color: #e0bc87 !important;
+        }
+        .admin-actions-dark .action-card-badge.badge-gold {
+            color: #f5d79e !important;
+        }
+        .admin-actions-dark .action-card-meta h4 {
+            color: #ffffff !important;
+        }
+        .admin-actions-dark .action-card-text {
+            color: #94a3b8 !important;
+        }
+        .admin-actions-dark .action-card-checklist {
+            border-top: 1px dashed rgba(255, 255, 255, 0.15) !important;
+        }
+        .admin-actions-dark .check-item {
+            color: #e2e8f0 !important;
+        }
+        .admin-actions-dark .check-item i {
+            color: #e0bc87 !important;
+        }
+
+        /* Sidebar Styling */
+        .service-sidebar {
+            background: #ffffff;
+            border-radius: 22px;
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 12px 30px -6px rgba(15, 23, 42, 0.08);
+            padding: 2.75rem 2rem;
+            position: sticky;
+            top: 120px;
+        }
+        .sidebar-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            background: rgba(37, 211, 102, 0.1);
+            color: #15803d;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(37, 211, 102, 0.25);
+        }
+        .sidebar-icon-wrap {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 1.5rem;
+            border-radius: 20px;
+            background: rgba(194, 147, 82, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(194, 147, 82, 0.25);
+        }
+        .sidebar-icon-wrap .sidebar-icon {
+            font-size: 2.2rem;
+            color: var(--color-accent);
+            margin-bottom: 0;
+        }
+        .sidebar-title {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+        .sidebar-text {
+            font-size: 0.96rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.75rem;
+        }
+        .sidebar-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            padding: 1rem 1.5rem;
+            font-size: 1.02rem;
+            font-weight: 700;
+            border-radius: 12px;
+        }
+        .sidebar-other-services {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        .sidebar-other-services h4 {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #94a3b8;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+        .other-services-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .other-services-list li a {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.85rem 1rem;
+            border-radius: 12px;
+            background: #f8fafc;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: all 0.25s ease;
+        }
+        .other-services-list li a i:first-child {
+            color: var(--color-accent);
+            font-size: 1rem;
+            width: 20px;
+            text-align: center;
+        }
+        .other-services-list li a .list-arrow {
+            margin-left: auto;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            transition: transform 0.25s ease;
+        }
+        .other-services-list li a:hover {
+            background: #ffffff;
+            border-color: rgba(194, 147, 82, 0.4);
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+            color: var(--color-accent);
+        }
+        .other-services-list li a:hover .list-arrow {
+            transform: translateX(3px);
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 992px) {
+            .grid-layout { grid-template-columns: 1fr; gap: 3rem; }
+            .service-sidebar { position: static; }
+            .admin-pillars-container { grid-template-columns: 1fr; }
+            .admin-stats-overlay { grid-template-columns: 1fr; }
+            .admin-lead-card { padding: 1.75rem; }
+        }
+
+        @media (max-width: 640px) {
+            .admin-actions-section { padding: 2rem 1.25rem; }
+            .action-card-header { flex-direction: column; align-items: flex-start; gap: 0.85rem; }
+        }
+    </style>
+</head>
+<body>    <header id="main-header" class="glass-header">
+        <div class="container header-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../img/logo-abogados.png" alt="AV Consultores Jurídicos" class="logo-img">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="../../servicios/index.html">Servicios <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="../../servicios/derecho-civil/index.html">Derecho Civil</a></li>
+                            <li><a href="../../servicios/derecho-laboral/index.html">Derecho Laboral</a></li>
+                            <li><a href="../../servicios/derecho-administrativo/index.html">Derecho Administrativo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../nuestra-firma/index.html">Nuestra Firma</a></li>
+                    <li class="nav-item"><a href="../../contacto/index.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../../contacto/index.html" class="btn btn-primary cta-agenda">Agenda una Consulta</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Abrir menÃº"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>    <section style="background: url('../../img/Derecho-administrativo-Conceptos-esenciales1-1.jpg') center/cover no-repeat; padding: 180px 0 140px; position: relative;">
+        <!-- Capa de oscurecimiento (Degradado lateral) -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 45%, rgba(15, 23, 42, 0) 100%); z-index: 0;"></div>
+        
+        <div class="container" style="position: relative; z-index: 1; display: flex; align-items: center; min-height: 35vh;">
+            <div style="max-width: 700px;">
+                <!-- Badge -->
+                <div style="display: inline-flex; align-items: center; gap: 0.8rem; background: rgba(194, 147, 82, 0.15); padding: 0.6rem 1.2rem; border-radius: 50px; border: 1px solid rgba(194, 147, 82, 0.3); margin-bottom: 1.8rem;">
+                    <i class="fas fa-landmark" style="color: #c4a47c;"></i>
+                    <span style="color: #c4a47c; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Área de Práctica</span>
+                </div>
+                
+                <!-- Título -->
+                <h1 style="font-size: clamp(3rem, 5vw, 4.8rem); font-weight: 800; color: #ffffff; line-height: 1.1; margin-bottom: 1.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.3); letter-spacing: -1px; width: 100%; text-align: left;">Derecho <span style="color: #c4a47c;">Administrativo</span></h1>
+                
+                <!-- Subtítulo -->
+                <p style="font-size: 1.35rem; color: #e2e8f0; line-height: 1.6; margin-bottom: 0; font-weight: 300; width: 100%; text-align: left;">Soluciones jurídicas estratégicas frente a la administración pública y órganos del Estado</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container grid-layout">
+            <!-- Contenido Principal -->
+            <article class="main-text">
+                <!-- Bloque Superior Institucional -->
+                <div class="admin-lead-card">
+                    <div class="admin-lead-header">
+                        <span class="service-category-tag">
+                            <i class="fas fa-building-columns"></i> Sector Público & Contencioso
+                        </span>
+                        <h2 class="service-detail-title">Especialistas en Derecho Administrativo</h2>
+                    </div>
+
+                    <p class="service-lead-paragraph">
+                        Brindamos orientación y asesoría jurídica frente a las actuaciones, decisiones y procedimientos adelantados por entidades y autoridades públicas, así como en aquellas situaciones en las que puedan encontrarse comprometidos los derechos e intereses de los ciudadanos. Nuestra práctica comprende el acompañamiento en actuaciones administrativas, controversias con entidades públicas, asuntos relacionados con la contratación estatal, responsabilidad del Estado y demás mecanismos jurídicos destinados a la protección de los derechos frente a la administración pública. Asimismo, brindamos acompañamiento en trámites y actuaciones de carácter administrativo y contravencional, procurando identificar en cada caso las alternativas jurídicas procedentes y las herramientas disponibles para su adecuada atención.
+                    </p>
+
+                    <!-- Imagen Panorámica con Tarjeta de Respaldo Integrada -->
+                    <div class="admin-media-wrapper">
+                        <img src="../../img/Derecho-administrativo-Conceptos-esenciales1-1.jpg" alt="Especialistas en Derecho Administrativo" class="admin-panoramic-img">
+                        <div class="admin-stats-overlay">
+                            <div class="admin-stat-item">
+                                <i class="fas fa-scale-balanced"></i>
+                                <div>
+                                    <span class="stat-title">Defensa Contenciosa</span>
+                                    <span class="stat-sub">Tribunales y Consejo de Estado</span>
+                                </div>
+                            </div>
+                            <div class="admin-stat-item">
+                                <i class="fas fa-file-shield"></i>
+                                <div>
+                                    <span class="stat-title">Contratación Estatal</span>
+                                    <span class="stat-sub">Pliegos, licitaciones y SECOP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: ¿Cómo te ayudamos? con Estilo de Tarjetas Comparativas / Pilares de Acción -->
+                <section class="admin-actions-section admin-actions-dark">
+                    <div class="admin-actions-header">
+                        <span class="sub-label">Metodología Especializada</span>
+                        <h3 class="service-section-title">¿Cómo te ayudamos?</h3>
+                        <p class="admin-actions-desc">
+                            Nuestra práctica en Derecho Administrativo está diseñada para garantizar el debido proceso y defender sus intereses ante el Estado, abarcando desde la estructuración de proyectos en contratación estatal hasta la defensa en litigios complejos y procesos sancionatorios.
+                        </p>
+                    </div>
+
+                    <div class="admin-pillars-container">
+                        <!-- Tarjeta 01: Consultoría Integral -->
+                        <div class="admin-action-card">
+                            <div class="action-card-header">
+                                <div class="action-card-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <div class="action-card-meta">
+                                    <span class="action-card-badge">Fase Preventiva</span>
+                                    <h4>Consultoría Integral</h4>
+                                </div>
+                            </div>
+                            <p class="action-card-text">
+                                Asesoría preventiva en trámites administrativos, revisión de pliegos y estructuración de ofertas para procesos de selección con el Estado.
+                            </p>
+                            <div class="action-card-checklist">
+                                <div class="check-item"><i class="fas fa-check"></i> Acompañamiento en licitaciones públicas</div>
+                                <div class="check-item"><i class="fas fa-check"></i> Recursos en sede administrativa</div>
+                                <div class="check-item"><i class="fas fa-check"></i> Conceptos jurídicos y viabilidad contractual</div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 02: Representación Legal -->
+                        <div class="admin-action-card featured-admin-card">
+                            <div class="action-card-header">
+                                <div class="action-card-icon icon-gold">
+                                    <i class="fas fa-gavel"></i>
+                                </div>
+                                <div class="action-card-meta">
+                                    <span class="action-card-badge badge-gold">Fase Litigio</span>
+                                    <h4>Representación Legal</h4>
+                                </div>
+                            </div>
+                            <p class="action-card-text">
+                                Defensa especializada en la jurisdicción contencioso administrativa, nulidades, restablecimiento de derechos y controversias contractuales.
+                            </p>
+                            <div class="action-card-checklist">
+                                <div class="check-item"><i class="fas fa-check"></i> Demandas de nulidad y restablecimiento</div>
+                                <div class="check-item"><i class="fas fa-check"></i> Procesos de responsabilidad fiscal y disciplinaria</div>
+                                <div class="check-item"><i class="fas fa-check"></i> Controversias contractuales con el Estado</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Sidebar Institucional de Derecho Administrativo -->
+            <aside class="sidebar service-sidebar">
+                <div class="sidebar-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Asesoría Estratégica</span>
+                </div>
+                <div class="sidebar-icon-wrap">
+                    <i class="fas fa-landmark sidebar-icon"></i>
+                </div>
+                <h3 class="sidebar-title">¿Necesitas asesoría?</h3>
+                <p class="sidebar-text">Nuestro equipo especialista en Derecho Administrativo defiende tus derechos frente a entidades públicas y órganos de control.</p>
+                
+                <a href="../../contacto/index.html" class="btn btn-primary sidebar-btn">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Agendar Consulta</span>
+                </a>
+                
+                <div class="sidebar-other-services">
+                    <h4>Otras Áreas de Práctica</h4>
+                    <ul class="other-services-list">
+                        <li>
+                            <a href="../../servicios/derecho-civil/index.html">
+                                <i class="fas fa-scale-balanced"></i>
+                                <span>Derecho Civil</span>
+                                <i class="fas fa-arrow-right list-arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../servicios/derecho-laboral/index.html">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Derecho Laboral</span>
+                                <i class="fas fa-arrow-right list-arrow"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>    <!-- 6. FOOTER -->
+    <footer id="contacto" class="main-footer dark-bg">
+        <!-- Separador decorativo superior -->
+        <div class="footer-top-deco">
+            <span class="footer-deco-line"></span>
+            <span class="footer-deco-icon"><i class="fas fa-scale-balanced"></i></span>
+            <span class="footer-deco-line"></span>
+        </div>
+
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo footer-logo">
+                    <img src="../../img/logo-abogados.png" alt="AV Consultores Jurídicos" class="logo-img">
+                </a>
+                <p class="footer-desc">Firma jurídica especializada en orientación, asesoría y acompañamiento legal a personas naturales y empresas, con soluciones claras y responsables.</p>
+                <div class="footer-brand-accent"></div>
+
+                <!-- Entidades de Vigilancia y Acreditación -->
+                <div class="footer-vigilado">
+                    <div class="footer-vigilado-header">
+                        <i class="fas fa-shield-halved footer-vigilado-icon" aria-hidden="true"></i>
+                        <span class="footer-vigilado-label">Vigilado y avalado por</span>
+                    </div>
+                    <div class="footer-vigilado-grid">
+                        <div class="footer-vigilado-card" title="Rama Judicial de Colombia · Consejo Superior de la Judicatura">
+                            <img src="../../img/Rama_Judicial_de_Colombia.png" alt="Rama Judicial de Colombia" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Cámara de Comercio de Bogotá · Matrícula Mercantil">
+                            <img src="../../img/camaracomerbog_logo.jpg" alt="Cámara de Comercio de Bogotá" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Superintendencia de Industria y Comercio · Vigilancia y Control">
+                            <img src="../../img/images.jpg" alt="Superintendencia de Industria y Comercio" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Consejo Superior de la Judicatura · Registro Nacional de Abogados">
+                            <img src="../../img/site_logo.png" alt="Consejo Superior de la Judicatura" class="footer-vigilado-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-nav-col">
+                <h3 class="footer-col-title">Navegación</h3>
+                <ul class="footer-links-list">
+                    <li><a href="../../index.html#reglas-consultorio"><i class="fas fa-chevron-right"></i> Reglas del Consultorio</a></li>
+                    <li><a href="../../index.html#servicios"><i class="fas fa-chevron-right"></i> Áreas de Trabajo</a></li>
+                    <li><a href="../../index.html#sobre-nosotros"><i class="fas fa-chevron-right"></i> Quiénes Somos</a></li>
+                    <li><a href="../../index.html#como-funciona"><i class="fas fa-chevron-right"></i> Cómo Funciona</a></li>
+                    <li><a href="../../nuestra-firma/index.html"><i class="fas fa-chevron-right"></i> Nuestra Firma</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 class="footer-col-title">Contacto</h3>
+                <ul class="contact-list">
+                    <li>
+                        <div class="contact-list-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">Correo electrónico</span>
+                            <a href="mailto:avconsultores07@gmail.com">avconsultores07@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-list-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">Teléfono</span>
+                            <a href="tel:+570000000000">000 000 00 00</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-list-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">WhatsApp</span>
+                            <a href="https://wa.me/570000000000" target="_blank" rel="noopener">Escríbenos ahora</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 AV Consultores Jurídicos S.A.S. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de privacidad</a>
+                    <span>·</span>
+                    <a href="#">Términos de uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WIDGETS -->
+    <a href="https://wa.me/570000000000" class="whatsapp-float" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="../../main.js"></script>
+</body>
+</html>

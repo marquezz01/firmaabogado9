@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV Consultores Jurídicos S.A.S</title>
+    <meta name="description" content="Servicio de Consultorio Jurídico Gratuito Virtual, brindado por AV consultores Jurídicos S.A.S.">
+    <!-- Favicon / Ícono de pestaña y barra de navegación al buscar -->
+    <link rel="icon" type="image/x-icon" href="img/logo-abogados-icono.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo-abogados-icono.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 1. ENCABEZADO Y NAVEGACIÓN -->
+    <header id="main-header" class="glass-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="img/logo-abogados.png" alt="AV Consultores Jurídicos" class="logo-img">
+            </a>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="servicios/index.html">Servicios <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="servicios/derecho-civil/index.html">Derecho Civil</a></li>
+                            <li><a href="servicios/derecho-laboral/index.html">Derecho Laboral</a></li>
+                            <li><a href="servicios/derecho-administrativo/index.html">Derecho Administrativo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="nuestra-firma/index.html">Nuestra Firma</a></li>
+                    <li class="nav-item"><a href="contacto/index.html">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="#contacto" class="btn btn-primary cta-agenda">Agenda una Consulta</a>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- 2. SECCIÓN HERO -->
+    <section id="hero" style="background: url('img/bogota_street_hero.jpg') center/cover no-repeat; padding: 220px 0 160px; position: relative;">
+        <!-- Capa de oscurecimiento (Degradado lateral) -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 45%, rgba(15, 23, 42, 0) 100%); z-index: 0;"></div>
+        
+        <div class="container" style="position: relative; z-index: 1; display: flex; align-items: center; min-height: 50vh;">
+            <div style="max-width: 800px;">
+                <!-- Badge -->
+                <div style="display: inline-flex; align-items: center; gap: 0.8rem; background: rgba(194, 147, 82, 0.15); padding: 0.6rem 1.2rem; border-radius: 50px; border: 1px solid rgba(194, 147, 82, 0.3); margin-bottom: 1.8rem;">
+                    <i class="fas fa-scale-balanced" style="color: #c4a47c;"></i>
+                    <span style="color: #c4a47c; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Servicio de Consultorio Jurídico Gratuito Virtual</span>
+                </div>
+                
+                <!-- Título -->
+                <h1 style="font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 800; color: #ffffff; line-height: 1.1; margin-bottom: 1.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.3); letter-spacing: -1px; width: 100%; text-align: left; text-wrap: balance;">Atención Transparente y <span style="color: #c4a47c;">Rigor Profesional</span></h1>
+                
+                <!-- Subtítulo -->
+                <p style="font-size: 1.35rem; color: #e2e8f0; line-height: 1.6; border-left: 3px solid #c4a47c; padding-left: 1.5rem; margin-bottom: 2.5rem; font-weight: 300; width: 100%; text-align: left; max-width: 700px;">Porque la justicia debe estar al alcance de todos, nuestro consultorio jurídico virtual ofrece orientación legal inicial gratuita y sin barreras geográficas en cada rincón del país; te invitamos a dar el primer paso y compartir tus dudas haciendo clic en el botón de contacto para que nuestro equipo comience a guiarte.</p>
+
+                <!-- Botones -->
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#contacto" class="btn btn-primary btn-lg" style="box-shadow: 0 4px 20px rgba(194, 147, 82, 0.4);">Contáctanos</a>
+                    <a href="nuestra-firma/index.html" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">Conoce más sobre nosotros</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         REGLAS DEL CONSULTORIO — ALTERNANCIA VISUAL
+         ═══════════════════════════════════════════════ -->
+    <section id="reglas-consultorio" class="rules-section section-padding">
+        <div class="container">
+            <!-- Encabezado -->
+            <div class="rules-header">
+                <div class="rules-header-glow"></div>
+                
+                <div class="rules-badge">
+                    <span class="pulse-dot"></span>
+                    <i class="fas fa-scale-balanced"></i>
+                    <span>Términos de Atención</span>
+                </div>
+
+                <h2 class="rules-title">Reglas del <span class="title-accent">consultorio</span></h2>
+
+                <div class="rules-divider">
+                    <span class="rules-divider-line"></span>
+                    <span class="rules-divider-icon"><i class="fas fa-gavel"></i></span>
+                    <span class="rules-divider-line"></span>
+                </div>
+
+                <div class="rules-intro-card">
+                    <p class="rules-intro">La orientación inicial comprende una revisión preliminar de la situación planteada y la identificación de las alternativas jurídicas que, en principio, podrían resultar aplicables. La atención de actuaciones, trámites, representación judicial o servicios jurídicos adicionales estará sujeta a las condiciones y honorarios previamente informados al cliente.</p>
+                    
+                    <div class="rules-trust-pills">
+                        <span class="rules-trust-pill">
+                            <i class="fas fa-shield-halved"></i> Transparencia &amp; Ética
+                        </span>
+                        <span class="rules-trust-pill">
+                            <i class="fas fa-laptop-code"></i> Atención 100% Virtual
+                        </span>
+                        <span class="rules-trust-pill">
+                            <i class="fas fa-user-check"></i> Consulta Individual
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REGLAS: CUADRÍCULA EDITORIAL 3×2 DE CONDICIONES -->
+            <div class="rules-cards-grid">
+
+                <!-- Condición 01 — TARJETA DESTACADA (Beneficio Principal) -->
+                <div class="rule-card rule-card-featured">
+                    <div class="rule-card-glow"></div>
+                    <div class="rule-card-header">
+                        <div class="rule-icon-box">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div class="rule-header-meta">
+                            <span class="rule-chip chip-gold">
+                                <i class="fas fa-star"></i> Condición 01
+                            </span>
+                            <span class="rule-number">01</span>
+                        </div>
+                    </div>
+                    <div class="rule-card-body">
+                        <h3 class="rule-title">Primera consulta gratuita</h3>
+                        <div class="rule-gold-line"></div>
+                        <p class="rule-desc">Tu orientación inicial y el diagnóstico básico de tu caso a través de nuestra plataforma no tienen ningún costo.</p>
+                    </div>
+                    <div class="rule-card-footer">
+                        <span class="rule-footer-tag">
+                            <i class="fas fa-check-circle"></i> Diagnóstico sin costo
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Condición 02 -->
+                <div class="rule-card rule-card-featured">
+                    <div class="rule-card-glow"></div>
+                    <div class="rule-card-header">
+                        <div class="rule-icon-box">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="rule-header-meta">
+                            <span class="rule-chip chip-gold">Condición 02</span>
+                            <span class="rule-number">02</span>
+                        </div>
+                    </div>
+                    <div class="rule-card-body">
+                        <h3 class="rule-title">Límite de Consultas</h3>
+                        <div class="rule-gold-line"></div>
+                        <p class="rule-desc">Solo se permite una consulta por usuario.</p>
+                    </div>
+                    <div class="rule-card-footer">
+                        <span class="rule-footer-tag">
+                            <i class="fas fa-user-shield"></i> 1 consulta por persona
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Condición 03 -->
+                <div class="rule-card rule-card-featured">
+                    <div class="rule-card-glow"></div>
+                    <div class="rule-card-header">
+                        <div class="rule-icon-box">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="rule-header-meta">
+                            <span class="rule-chip chip-gold">Condición 03</span>
+                            <span class="rule-number">03</span>
+                        </div>
+                    </div>
+                    <div class="rule-card-body">
+                        <h3 class="rule-title">Consultorio Virtual</h3>
+                        <div class="rule-gold-line"></div>
+                        <p class="rule-desc">Este es un consultorio jurídico exclusivamente virtual.</p>
+                    </div>
+                    <div class="rule-card-footer">
+                        <span class="rule-footer-tag">
+                            <i class="fas fa-wifi"></i> Atención 100% en línea
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Condición 04 -->
+                <div class="rule-card">
+                    <div class="rule-card-header">
+                        <div class="rule-icon-box">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="rule-header-meta">
+                            <span class="rule-chip">Condición 04</span>
+                            <span class="rule-number">04</span>
+                        </div>
+                    </div>
+                    <div class="rule-card-body">
+                        <h3 class="rule-title">Admisión de casos</h3>
+                        <div class="rule-gold-line"></div>
+                        <p class="rule-desc">Nos reservamos el derecho de admisión y estudio previo de cada solicitud, por lo que la atención o aceptación de un caso dependerá de nuestra disponibilidad de agenda, viabilidad jurídica y conflicto de intereses.</p>
+                    </div>
+                    <div class="rule-card-footer">
+                        <span class="rule-footer-tag">
+                            <i class="fas fa-clipboard-check"></i> Estudio previo de viabilidad
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Condición 05 -->
+                <div class="rule-card">
+                    <div class="rule-card-header">
+                        <div class="rule-icon-box">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="rule-header-meta">
+                            <span class="rule-chip">Condición 05</span>
+                            <span class="rule-number">05</span>
+                        </div>
+                    </div>
+                    <div class="rule-card-body">
+                        <h3 class="rule-title">Servicio privado y autónomo</h3>
+                        <div class="rule-gold-line"></div>
+                        <p class="rule-desc">Aclaramos que no somos abogados de oficio ni dependemos de entidades estatales; somos un consultorio virtual privado enfocado en brindar una primera orientación accesible.</p>
+                    </div>
+                    <div class="rule-card-footer">
+                        <span class="rule-footer-tag">
+                            <i class="fas fa-scale-balanced"></i> Práctica jurídica independiente
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Condición 06 -->
+                <div class="rule-card">
+                    <div class="rule-card-header">
+                        <div class="rule-icon-box">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <div class="rule-header-meta">
+                            <span class="rule-chip">Condición 06</span>
+                            <span class="rule-number">06</span>
+                        </div>
+                    </div>
+                    <div class="rule-card-body">
+                        <h3 class="rule-title">Compromiso de veracidad</h3>
+                        <div class="rule-gold-line"></div>
+                        <p class="rule-desc">Al enviarnos tu caso, garantizas que la información y los documentos proporcionados son reales y veraces para poder ofrecerte un análisis jurídico adecuado.</p>
+                    </div>
+                    <div class="rule-card-footer">
+                        <span class="rule-footer-tag">
+                            <i class="fas fa-shield-halved"></i> Información veraz y responsable
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Módulo Acción / Aceptación -->
+            <div class="rules-action-card">
+                <div class="rules-action-info">
+                    <div class="rules-action-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="rules-action-text">
+                        <h4>Atención Transparente y Rigor Profesional</h4>
+                        <p>Porque la justicia debe estar al alcance de todos, nuestro consultorio jurídico virtual ofrece orientación legal inicial gratuita y sin barreras geográficas en cada rincón del país; te invitamos a dar el primer paso y compartir tus dudas haciendo clic en el botón de contacto para que nuestro equipo comience a guiarte.</p>
+                    </div>
+                </div>
+                <a href="#contacto" class="btn btn-primary rules-action-btn">
+                    <span>Iniciar Consulta</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         3. ÁREAS DE TRABAJO — EDITORIAL SHOWCASE
+         ═══════════════════════════════════════════════ -->
+    <section id="servicios" class="services-section section-padding">
+        <!-- Decoración superior -->
+        <div class="services-section-deco"></div>
+        <div class="container">
+            <!-- Encabezado centrado con jerarquía fuerte -->
+            <div class="section-header-centered">
+                <div class="rules-badge" style="margin: 0 auto 1.2rem;">
+                    <span class="pulse-dot"></span>
+                    <i class="fas fa-briefcase"></i>
+                    <span>Práctica Jurídica</span>
+                </div>
+                <h2 class="section-title-main section-title-blue">Nuestras Áreas de Trabajo</h2>
+                <div class="section-title-underline">
+                    <span class="underline-bar"></span>
+                    <span class="underline-diamond"><i class="fas fa-gem"></i></span>
+                    <span class="underline-bar"></span>
+                </div>
+                <p class="section-subtitle">Conozca nuestras principales áreas de especialidad, diseñadas para brindarle el respaldo jurídico que usted o su empresa necesitan.</p>
+            </div>
+
+            <!-- Tarjetas de áreas de trabajo -->
+            <div class="work-areas-grid">
+
+                <!-- Área 1: Derecho Civil -->
+                <div class="work-area-card" data-area="civil">
+                    <div class="work-area-image">
+                        <img src="img/imageeeen.jpg" alt="Derecho Civil">
+                        <div class="work-area-image-overlay"></div>
+                        <span class="work-area-num">01</span>
+                    </div>
+                    <div class="work-area-body">
+                        <div class="work-area-icon-row">
+                            <div class="work-area-icon">
+                                <i class="fas fa-scale-balanced"></i>
+                            </div>
+                            <div class="work-area-label-wrap">
+                                <span class="work-area-tag">Especialidad Civil</span>
+                                <h3>Derecho Civil</h3>
+                            </div>
+                        </div>
+                        <p>Asesoría jurídica en relaciones civiles, familiares y patrimoniales. Te acompañamos en controversias, obligaciones, contratos y mecanismos de conciliación para prevenir y solucionar conflictos de manera clara y oportuna.</p>
+                        <div class="work-area-features">
+                            <span><i class="fas fa-check"></i> Contratos</span>
+                            <span><i class="fas fa-check"></i> Familia</span>
+                            <span><i class="fas fa-check"></i> Conciliación</span>
+                        </div>
+                        <a href="servicios/derecho-civil/index.html" class="work-area-btn">
+                            <span>Saber más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Área 2: Derecho Laboral -->
+                <div class="work-area-card" data-area="laboral">
+                    <div class="work-area-image">
+                        <img src="img/LABORAL-1.jpeg" alt="Derecho Laboral">
+                        <div class="work-area-image-overlay"></div>
+                        <span class="work-area-num">02</span>
+                    </div>
+                    <div class="work-area-body">
+                        <div class="work-area-icon-row">
+                            <div class="work-area-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="work-area-label-wrap">
+                                <span class="work-area-tag">Especialidad Laboral</span>
+                                <h3>Derecho Laboral y Seguridad Social</h3>
+                            </div>
+                        </div>
+                        <p>Orientación para trabajadores y empleadores en relaciones laborales, terminación del vínculo, prestaciones, indemnizaciones, pensiones y riesgos laborales, garantizando una protección integral de tus derechos.</p>
+                        <div class="work-area-features">
+                            <span><i class="fas fa-check"></i> Liquidaciones</span>
+                            <span><i class="fas fa-check"></i> Pensiones</span>
+                            <span><i class="fas fa-check"></i> Riesgos</span>
+                        </div>
+                        <a href="servicios/derecho-laboral/index.html" class="work-area-btn">
+                            <span>Saber más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Área 3: Derecho Administrativo -->
+                <div class="work-area-card" data-area="admin">
+                    <div class="work-area-image">
+                        <img src="img/Derecho-administrativo-Conceptos-esenciales1-1.jpg" alt="Derecho Administrativo">
+                        <div class="work-area-image-overlay"></div>
+                        <span class="work-area-num">03</span>
+                    </div>
+                    <div class="work-area-body">
+                        <div class="work-area-icon-row">
+                            <div class="work-area-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <div class="work-area-label-wrap">
+                                <span class="work-area-tag">Especialidad Administrativa</span>
+                                <h3>Derecho Administrativo</h3>
+                            </div>
+                        </div>
+                        <p>Acompañamiento frente a actuaciones de autoridades públicas, controversias con el Estado, contratación estatal y trámites de carácter administrativo y contravencional, defendiendo tus derechos de forma efectiva.</p>
+                        <div class="work-area-features">
+                            <span><i class="fas fa-check"></i> Estado</span>
+                            <span><i class="fas fa-check"></i> Contratación</span>
+                            <span><i class="fas fa-check"></i> Trámites</span>
+                        </div>
+                        <a href="servicios/derecho-administrativo/index.html" class="work-area-btn">
+                            <span>Saber más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA inferior de servicios: Diagramación Ejecutiva de Pilares -->
+            <div class="services-bottom-cta">
+                <div class="services-cta-pillars">
+                    <!-- Pilar 1 -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon-wrap">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <div class="pillar-body">
+                            <span class="pillar-tag">01 · Rigor Legal</span>
+                            <h4 class="pillar-text">Rigor técnico y excelencia legal</h4>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 2 -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon-wrap">
+                            <i class="fas fa-bolt-lightning"></i>
+                        </div>
+                        <div class="pillar-body">
+                            <span class="pillar-tag">02 · Prevención</span>
+                            <h4 class="pillar-text">Enfoque preventivo y resolución ágil</h4>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 3 -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon-wrap">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="pillar-body">
+                            <span class="pillar-tag">03 · Estrategia</span>
+                            <h4 class="pillar-text">Atención personalizada y estratégica</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-cta-divider"></div>
+
+                <div class="services-cta-action">
+                    <a href="#contacto" class="btn btn-primary services-action-btn btn-glow">
+                        <span>Solicitar Consulta</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <span class="cta-micro-note">
+                        <i class="fas fa-shield-halved"></i> Orientación inicial confidencial
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         4. SOBRE NOSOTROS — FONDO AZUL OSCURO
+         ═══════════════════════════════════════════════ -->
+    <section id="sobre-nosotros" class="about-section about-dark-bg section-padding">
+        <div class="container">
+            <div class="about-dark-grid">
+                <!-- Columna Izquierda: Quiénes Somos -->
+                <div class="about-dark-text">
+                    <div class="rules-badge rules-badge-light" style="margin-bottom: 1.5rem;">
+                        <span class="pulse-dot pulse-dot-light"></span>
+                        <i class="fas fa-scale-balanced"></i>
+                        <span>Nuestra Firma</span>
+                    </div>
+
+                    <h2 class="about-dark-title">¿Quiénes <span class="title-accent">Somos?</span></h2>
+                    <div class="about-dark-divider"></div>
+
+                    <p class="about-dark-desc">
+                        <strong>VA Consultores Jurídicos S.A.S.</strong> es una firma jurídica que brinda orientación, asesoría y acompañamiento legal a personas naturales y empresas, con soluciones claras, responsables y ajustadas a cada situación.
+                    </p>
+                    <p class="about-dark-desc">
+                        Nuestro Consultorio Jurídico Virtual facilita el acceso a una primera orientación legal, permitiendo conocer derechos, alternativas y posibles rutas de acción, sin barreras geográficas.
+                    </p>
+                    <p class="about-dark-desc">
+                        Contamos con profesionales comprometidos con la ética, confidencialidad, responsabilidad y rigor jurídico, de conformidad con las normas que regulan el ejercicio de la abogacía en Colombia.
+                    </p>
+                </div>
+
+                <!-- Columna Derecha: Misión, Visión y Valores -->
+                <div class="about-dark-cards">
+                    <style>
+                        .accordion-card summary::-webkit-details-marker {
+                            display: none;
+                        }
+                        .accordion-card[open] .accordion-icon {
+                            transform: rotate(180deg);
+                        }
+                        .accordion-icon {
+                            transition: transform 0.3s ease;
+                            font-size: 1rem;
+                        }
+                        .accordion-card {
+                            transition: all 0.3s ease;
+                        }
+                    </style>
+
+                    <!-- Acordeón Misión -->
+                    <details class="accordion-card accordion-dark" open>
+                        <summary class="accordion-dark-summary">
+                            <span class="accordion-summary-inner">
+                                <span class="accordion-summary-icon"><i class="fas fa-bullseye"></i></span>
+                                Misión
+                            </span>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </summary>
+                        <div class="accordion-dark-content">
+                            <p>Buscamos brindar orientación, asesoría y servicios jurídicos a personas naturales y empresas, facilitando el acceso a soluciones legales mediante una atención profesional, clara y cercana.</p>
+                            <p>A través de nuestro consultorio jurídico virtual buscamos ofrecer una primera orientación accesible, identificando las circunstancias particulares de cada caso y proporcionando información jurídica que permita a nuestros usuarios conocer sus derechos, alternativas y posibles cursos de acción.</p>
+                            <p>Desarrollamos nuestra actividad bajo principios de ética, responsabilidad, confidencialidad, transparencia y rigor jurídico.</p>
+                        </div>
+                    </details>
+
+                    <!-- Acordeón Visión -->
+                    <details class="accordion-card accordion-dark">
+                        <summary class="accordion-dark-summary">
+                            <span class="accordion-summary-inner">
+                                <span class="accordion-summary-icon accordion-summary-icon-gold"><i class="fas fa-eye"></i></span>
+                                Visión
+                            </span>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </summary>
+                        <div class="accordion-dark-content">
+                            <p>Buscamos consolidarnos como una firma jurídica reconocida en Colombia por brindar servicios legales accesibles, responsables y de calidad, apoyándonos en las herramientas tecnológicas para acercar el Derecho a personas y empresas en diferentes regiones del país.</p>
+                            <p>Buscamos fortalecer progresivamente nuestras áreas de práctica, ampliar nuestra cobertura y desarrollar un modelo de atención jurídica moderno que combine conocimiento, tecnología y atención personalizada.</p>
+                            <p>Aspiramos a construir relaciones de confianza con nuestros clientes y convertirnos en un aliado jurídico para la orientación, prevención y solución de sus necesidades legales.</p>
+                        </div>
+                    </details>
+
+                    <!-- Acordeón Valores -->
+                    <details class="accordion-card accordion-dark">
+                        <summary class="accordion-dark-summary">
+                            <span class="accordion-summary-inner">
+                                <span class="accordion-summary-icon accordion-summary-icon-gold"><i class="fas fa-star"></i></span>
+                                Nuestros Valores
+                            </span>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </summary>
+                        <div class="accordion-dark-content">
+                            <div class="about-metrics-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 1rem;">
+                                <div class="about-metric-card about-metric-dark">
+                                    <h4 style="color: var(--color-accent);">Responsabilidad</h4>
+                                    <p class="about-metric-sub">Asumimos cada consulta y asunto jurídico con seriedad y compromiso profesional.</p>
+                                </div>
+                                <div class="about-metric-card about-metric-dark">
+                                    <h4 style="color: var(--color-accent);">Rigor Jurídico</h4>
+                                    <p class="about-metric-sub">Analizamos cada situación atendiendo a las normas y circunstancias particulares del caso.</p>
+                                </div>
+                                <div class="about-metric-card about-metric-dark">
+                                    <h4 style="color: var(--color-accent);">Compromiso</h4>
+                                    <p class="about-metric-sub">Asumimos cada asunto con responsabilidad y dedicación procurando brindar a nuestros clientes un acompañamiento serio y constante.</p>
+                                </div>
+                                <div class="about-metric-card about-metric-dark">
+                                    <h4 style="color: var(--color-accent);">Confidencialidad</h4>
+                                    <p class="about-metric-sub">Protegemos la información y los asuntos confiados por nuestros clientes, garantizando un manejo responsable, reservado y ético de los datos y circunstancias conocidas en el ejercicio de nuestra labor jurídica.</p>
+                                </div>
+                                <div class="about-metric-card about-metric-dark">
+                                    <h4 style="color: var(--color-accent);">Accesibilidad</h4>
+                                    <p class="about-metric-sub">Acercamos la orientación jurídica a nuestros clientes sin importar dónde se encuentren. A través de nuestras herramientas virtuales, facilitamos el acceso a nuestros servicios desde cualquier lugar del país, reduciendo las barreras geográficas y haciendo que recibir orientación jurídica sea más sencillo y oportuno.</p>
+                                </div>
+                                <div class="about-metric-card about-metric-dark">
+                                    <h4 style="color: var(--color-accent);">Justicia</h4>
+                                    <p class="about-metric-sub">Orientamos nuestra labor hacia la protección de los derechos e intereses de nuestros clientes, promoviendo el acceso a herramientas jurídicas que les permitan conocer y ejercer sus derechos.</p>
+                                </div>
+                                <div class="about-metric-card about-metric-dark">
+                                    <h4 style="color: var(--color-accent);">Ética Profesional</h4>
+                                    <p class="about-metric-sub">Ejercemos nuestra labor con integridad, responsabilidad y respeto por los principios que rigen el ejercicio de la profesión jurídica, actuando siempre con transparencia y lealtad frente a nuestros clientes.</p>
+                                </div>
+                                <div class="about-metric-card about-metric-dark">
+                                    <h4 style="color: var(--color-accent);">Perseverancia</h4>
+                                    <p class="about-metric-sub">Asumimos cada asunto con constancia y determinación, manteniendo nuestro compromiso frente a los desafíos que puedan surgir y procurando avanzar de manera responsable hacia la solución de cada situación jurídica.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         5. CÓMO FUNCIONA — FONDO CLARO ALTERNADO
+         ═══════════════════════════════════════════════ -->
+    <section id="como-funciona" class="howto-section section-padding">
+        <div class="container">
+            <div class="section-header-centered">
+                <div class="rules-badge" style="margin: 0 auto 1.2rem;">
+                    <span class="pulse-dot"></span>
+                    <i class="fas fa-route"></i>
+                    <span>Proceso de Atención</span>
+                </div>
+                <h2 class="section-title-main">¿Cómo <span class="title-accent">funciona?</span></h2>
+                <div class="section-title-underline">
+                    <span class="underline-bar"></span>
+                    <span class="underline-diamond"><i class="fas fa-gem"></i></span>
+                    <span class="underline-bar"></span>
+                </div>
+                <p class="section-subtitle">Nuestra metodología de atención virtual para guiarte en tu proceso legal.</p>
+            </div>
+
+            <div class="howto-steps">
+                <div class="howto-step">
+                    <div class="howto-step-num">01</div>
+                    <div class="howto-step-icon"><i class="fas fa-edit"></i></div>
+                    <div class="howto-step-body">
+                        <h3>Cuéntanos tu caso</h3>
+                        <p>Completa nuestro formulario de contacto y proporciona la información necesaria para conocer tu situación.</p>
+                    </div>
+                    <div class="howto-connector"></div>
+                </div>
+                <div class="howto-step howto-step-featured">
+                    <div class="howto-step-num">02</div>
+                    <div class="howto-step-icon"><i class="fas fa-search"></i></div>
+                    <div class="howto-step-body">
+                        <h3>Revisamos tu solicitud</h3>
+                        <p>Analizamos la información suministrada para determinar si el asunto se encuentra dentro de nuestras áreas de atención y si existe viabilidad para brindarte orientación.</p>
+                    </div>
+                    <div class="howto-connector"></div>
+                </div>
+                <div class="howto-step howto-step-featured">
+                    <div class="howto-step-num">03</div>
+                    <div class="howto-step-icon"><i class="fas fa-comments"></i></div>
+                    <div class="howto-step-body">
+                        <h3>Recibe una orientación inicial</h3>
+                        <p>Te explicaremos de manera clara los aspectos jurídicos de tu caso y las alternativas disponibles. <br><small>(Esta orientación es una revisión preliminar. Cualquier trámite o representación adicional estará sujeta a honorarios previamente acordados).</small></p>
+                    </div>
+                    <div class="howto-connector"></div>
+                </div>
+                <div class="howto-step">
+                    <div class="howto-step-num">04</div>
+                    <div class="howto-step-icon"><i class="fas fa-shoe-prints"></i></div>
+                    <div class="howto-step-body">
+                        <h3>Define el siguiente paso</h3>
+                        <p>Cuando el asunto requiera actuaciones adicionales, te informaremos sobre las alternativas de atención y el alcance del servicio correspondiente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ═══════════════════════════════════════════════
+         7. FOOTER / CONTACTO
+         ═══════════════════════════════════════════════ -->
+    <footer id="contacto" class="main-footer dark-bg">
+        <!-- Separador decorativo superior -->
+        <div class="footer-top-deco">
+            <span class="footer-deco-line"></span>
+            <span class="footer-deco-icon"><i class="fas fa-scale-balanced"></i></span>
+            <span class="footer-deco-line"></span>
+        </div>
+
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <img src="img/logo-abogados.png" alt="AV Consultores Jurídicos" class="logo-img">
+                </a>
+                <p class="footer-desc">Firma jurídica especializada en orientación, asesoría y acompañamiento legal a personas naturales y empresas, con soluciones claras y responsables.</p>
+                <div class="footer-brand-accent"></div>
+
+                <!-- Entidades de Vigilancia y Acreditación -->
+                <div class="footer-vigilado">
+                    <div class="footer-vigilado-header">
+                        <i class="fas fa-shield-halved footer-vigilado-icon" aria-hidden="true"></i>
+                        <span class="footer-vigilado-label">Vigilado y avalado por</span>
+                    </div>
+                    <div class="footer-vigilado-grid">
+                        <div class="footer-vigilado-card" title="Rama Judicial de Colombia · Consejo Superior de la Judicatura">
+                            <img src="img/Rama_Judicial_de_Colombia.png" alt="Rama Judicial de Colombia" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Cámara de Comercio de Bogotá · Matrícula Mercantil">
+                            <img src="img/camaracomerbog_logo.jpg" alt="Cámara de Comercio de Bogotá" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Superintendencia de Industria y Comercio · Vigilancia y Control">
+                            <img src="img/images.jpg" alt="Superintendencia de Industria y Comercio" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Consejo Superior de la Judicatura · Registro Nacional de Abogados">
+                            <img src="img/site_logo.png" alt="Consejo Superior de la Judicatura" class="footer-vigilado-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-nav-col">
+                <h3 class="footer-col-title">Navegación</h3>
+                <ul class="footer-links-list">
+                    <li><a href="#reglas-consultorio"><i class="fas fa-chevron-right"></i> Reglas del Consultorio</a></li>
+                    <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Áreas de Trabajo</a></li>
+                    <li><a href="#sobre-nosotros"><i class="fas fa-chevron-right"></i> Quiénes Somos</a></li>
+                    <li><a href="#como-funciona"><i class="fas fa-chevron-right"></i> Cómo Funciona</a></li>
+                    <li><a href="nuestra-firma/index.html"><i class="fas fa-chevron-right"></i> Nuestra Firma</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 class="footer-col-title">Contacto</h3>
+                <ul class="contact-list">
+                    <li>
+                        <div class="contact-list-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">Correo electrónico</span>
+                            <a href="mailto:avconsultores07@gmail.com">avconsultores07@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-list-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">Teléfono</span>
+                            <a href="tel:+570000000000">000 000 00 00</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-list-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">WhatsApp</span>
+                            <a href="https://wa.me/570000000000" target="_blank" rel="noopener">Escríbenos ahora</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 AV Consultores Jurídicos S.A.S. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de privacidad</a>
+                    <span>·</span>
+                    <a href="#">Términos de uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WIDGETS -->
+    <a href="https://wa.me/570000000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tooltip">¡Escríbenos Ya!</span>
+    </a>
+
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>

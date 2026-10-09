@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Firma | Tu Firma Legal</title>
+    <!-- Favicon / Ícono de pestaña y barra de navegación al buscar -->
+    <link rel="icon" type="image/x-icon" href="../img/logo-abogados-icono.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo-abogados-icono.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Inner hero styles moved to inline HTML */
+
+        /* Layout specific styles */
+        .content-section {
+            padding: var(--section-padding);
+        }
+
+        .grid-2-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .grid-3-cols {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 4rem;
+        }
+
+        /* Cards & Features */
+        .feature-card {
+            background: var(--color-bg-white);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--color-accent);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Blog Cards */
+        .blog-card {
+            background: var(--color-bg-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 100%;
+        }
+
+        .blog-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-date {
+            color: var(--color-accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Forms */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            background: var(--color-bg-white);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+        }
+
+        /* Nuestra Firma Modern Layout */
+        .firm-about-section {
+            background: #ffffff;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .firm-trajectory-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 4.5rem;
+            align-items: center;
+        }
+
+        .service-category-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            background: rgba(194, 147, 82, 0.12);
+            color: #92672e;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(194, 147, 82, 0.28);
+        }
+
+        .firm-section-title {
+            font-size: clamp(2.3rem, 3.8vw, 3rem);
+            color: var(--color-primary);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .firm-lead-p {
+            font-size: 1.15rem;
+            line-height: 1.85;
+            color: #334155;
+            margin-bottom: 1.25rem;
+        }
+
+        .firm-body-p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+
+        .firm-badges-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .firm-badge-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 1rem 1.25rem;
+            border-radius: 14px;
+        }
+
+        .firm-badge-item i {
+            font-size: 1.6rem;
+            color: var(--color-accent);
+            background: rgba(194, 147, 82, 0.12);
+            padding: 0.6rem;
+            border-radius: 10px;
+        }
+
+        .firm-badge-item strong {
+            display: block;
+            color: var(--color-primary);
+            font-size: 0.95rem;
+        }
+
+        .firm-badge-item span {
+            display: block;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        .firm-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 1rem 2rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-radius: 14px;
+        }
+
+        .firm-image-frame {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.18);
+        }
+
+        .firm-hero-img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .firm-image-frame:hover .firm-hero-img {
+            transform: scale(1.03);
+        }
+
+        .firm-float-card {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(10px);
+            padding: 1.15rem 1.5rem;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            border: 1px solid rgba(194, 147, 82, 0.3);
+            color: #ffffff;
+        }
+
+        .firm-float-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(194, 147, 82, 0.2);
+            color: var(--color-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .float-card-title {
+            display: block;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+
+        .float-card-sub {
+            display: block;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+        }
+
+        /* Bloque Valores */
+        .firm-values-section {
+            background: #f8fafc;
+        }
+
+        .values-header {
+            margin-bottom: 3.5rem;
+        }
+
+        .sub-label {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-accent);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .title-divider {
+            width: 50px;
+            height: 3px;
+            background: var(--color-accent);
+            margin: 1rem auto 1.25rem;
+            border-radius: 2px;
+        }
+
+        .values-subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .values-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: 22px;
+            padding: 2.5rem 2rem;
+            transition: all 0.35s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(194, 147, 82, 0.4);
+            box-shadow: 0 18px 36px -6px rgba(15, 23, 42, 0.12);
+        }
+
+        .value-card.value-featured {
+            background: linear-gradient(145deg, var(--color-primary) 0%, #1e293b 100%);
+            border-color: rgba(194, 147, 82, 0.5);
+            box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.3);
+        }
+
+        .value-card.value-featured h3,
+        .value-card.value-featured p {
+            color: #ffffff;
+        }
+        
+        .value-card.value-featured .value-highlight {
+            color: #e2e8f0;
+            border-top-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .value-card.value-featured .value-num {
+            color: rgba(255, 255, 255, 0.85); /* Blanco muy visible en la tarjeta azul */
+        }
+
+        .value-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .value-icon-box {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: rgba(15, 23, 42, 0.05);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover .value-icon-box {
+            transform: scale(1.08) rotate(-4deg);
+        }
+
+        .value-icon-box.icon-gold {
+            background: rgba(194, 147, 82, 0.15);
+            color: var(--color-accent);
+            border-color: rgba(194, 147, 82, 0.35);
+        }
+
+        .value-num {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--color-accent); /* Color dorado de la marca */
+            line-height: 1;
+        }
+
+        .value-card h3 {
+            font-size: 1.45rem;
+            color: var(--color-primary);
+            font-weight: 800;
+            margin-bottom: 0.85rem;
+        }
+
+        .value-card p {
+            font-size: 0.98rem;
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .value-highlight {
+            margin-top: auto;
+            padding-top: 1.25rem;
+            border-top: 1px solid #f1f5f9;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .value-highlight i {
+            color: var(--color-accent);
+            font-size: 0.8rem;
+        }
+
+        /* ─── Pilares de Nuestro Servicio (Sección Estándar) ─── */
+        .firm-pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+        }
+
+        .firm-pillar-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+        }
+
+        .firm-pillar-card:hover {
+            border-color: rgba(194, 147, 82, 0.4);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+            transform: translateY(-5px);
+        }
+
+        /* Marca de agua grande de fondo con color visible */
+        .firm-pillar-card .pillar-watermark {
+            position: absolute;
+            right: -10px;
+            bottom: -20px;
+            font-size: 8rem;
+            font-weight: 900;
+            color: rgba(194, 147, 82, 0.14); /* Dorado visible de fondo en tarjetas blancas */
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            font-family: var(--font-heading);
+            user-select: none;
+        }
+
+        .firm-pillar-card:hover .pillar-watermark {
+            color: rgba(194, 147, 82, 0.25);
+            transform: scale(1.05);
+        }
+
+        /* Encabezado de la tarjeta con icono y número principal */
+        .pillar-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .firm-pillar-card .pillar-icon-box {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            background: rgba(194, 147, 82, 0.12);
+            border-radius: 16px;
+            border: 1px solid rgba(194, 147, 82, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-accent);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .firm-pillar-card:hover .pillar-icon-box {
+            transform: scale(1.06);
+            background: rgba(194, 147, 82, 0.2);
+        }
+
+        /* Número principal destacado con color vivo */
+        .pillar-number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1;
+            color: var(--color-accent); /* Color dorado corporativo vivo */
+            letter-spacing: -0.02em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .firm-pillar-card:hover .pillar-number {
+            transform: scale(1.1);
+            color: #d4af37;
+        }
+
+        .firm-pillar-card .pillar-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .firm-pillar-card h3 {
+            font-size: 1.45rem;
+            color: var(--color-primary);
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .firm-pillar-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin: 0;
+            transition: color 0.3s ease;
+        }
+
+        /* Pilar Destacado en Azul Marino (Tarjetas 01 y 04) */
+        .firm-pillar-card.pillar-featured {
+            background: linear-gradient(145deg, #090e1a 0%, #0f172a 60%, #17243b 100%);
+            border: 1px solid rgba(194, 147, 82, 0.35);
+            box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.28);
+        }
+
+        .firm-pillar-card.pillar-featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-accent), #f0d090);
+        }
+
+        .firm-pillar-card.pillar-featured:hover {
+            transform: translateY(-6px);
+            border-color: rgba(194, 147, 82, 0.6);
+            box-shadow: 0 22px 50px -10px rgba(0, 0, 0, 0.48), 0 0 0 1px rgba(194, 147, 82, 0.5);
+        }
+
+        /* Marca de agua en tarjetas azules con brillo dorado visible */
+        .firm-pillar-card.pillar-featured .pillar-watermark {
+            color: rgba(194, 147, 82, 0.20);
+        }
+
+        .firm-pillar-card.pillar-featured:hover .pillar-watermark {
+            color: rgba(194, 147, 82, 0.35);
+        }
+
+        /* Número principal en tarjetas azules con dorado brillante */
+        .firm-pillar-card.pillar-featured .pillar-number {
+            color: #e0bc87;
+            text-shadow: 0 0 18px rgba(224, 188, 135, 0.5);
+        }
+
+        .firm-pillar-card.pillar-featured:hover .pillar-number {
+            color: #ffffff;
+            text-shadow: 0 0 24px rgba(255, 255, 255, 0.7);
+        }
+
+        .firm-pillar-card.pillar-featured .pillar-icon-box {
+            background: linear-gradient(135deg, var(--color-accent), #e0bc87);
+            color: #0f172a;
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 6px 20px rgba(194, 147, 82, 0.3);
+        }
+
+        .firm-pillar-card.pillar-featured:hover .pillar-icon-box {
+            background: #d4af37;
+            color: #090e1a;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.45);
+        }
+
+        .firm-pillar-card.pillar-featured h3 {
+            color: #ffffff;
+        }
+
+        .firm-pillar-card.pillar-featured p {
+            color: #cbd5e1;
+        }
+
+        /* ─── Sección Vigilado por & Organismos de Control ─── */
+        .firm-vigilado-section {
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 5.5rem 0 6.5rem;
+            position: relative;
+        }
+
+        .vigilado-header {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .vigilado-badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.95rem;
+            border-radius: 50px;
+            background: rgba(194, 147, 82, 0.12);
+            color: #92672e;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.9rem;
+            border: 1px solid rgba(194, 147, 82, 0.3);
+        }
+
+        .vigilado-title {
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            color: var(--color-primary);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .vigilado-lead-text {
+            font-size: 1.05rem;
+            color: #64748b;
+            line-height: 1.75;
+            margin: 0 auto;
+        }
+
+        .vigilado-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.75rem;
+        }
+
+        .vigilado-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 2.25rem 1.5rem;
+            text-align: center;
+            transition: all 0.35s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vigilado-card:hover {
+            background: #ffffff;
+            border-color: rgba(194, 147, 82, 0.45);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.08);
+        }
+
+        .vigilado-img-slot {
+            width: 100%;
+            height: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            padding: 0.75rem;
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid rgba(226, 232, 240, 0.85);
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .vigilado-card:hover .vigilado-img-slot {
+            border-color: rgba(194, 147, 82, 0.35);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+        }
+
+        .vigilado-img {
+            max-height: 95px;
+            max-width: 200px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: none;
+            transition: all 0.35s ease;
+        }
+
+        .vigilado-card:hover .vigilado-img {
+            transform: scale(1.08);
+        }
+
+        .vigilado-placeholder-slot {
+            width: 100%;
+            height: 85px;
+            border: 2px dashed rgba(194, 147, 82, 0.35);
+            border-radius: 14px;
+            background: rgba(194, 147, 82, 0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            color: var(--color-accent);
+            transition: all 0.3s ease;
+        }
+
+        .vigilado-card:hover .vigilado-placeholder-slot {
+            border-color: var(--color-accent);
+            background: rgba(194, 147, 82, 0.08);
+            transform: scale(1.02);
+        }
+
+        .vigilado-placeholder-slot i {
+            font-size: 1.7rem;
+        }
+
+        .vigilado-placeholder-slot span {
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #64748b;
+        }
+
+        .vigilado-card-content {
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .vigilado-status-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 50px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: rgba(15, 23, 42, 0.04);
+            color: var(--color-primary);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            margin-bottom: 0.65rem;
+        }
+
+        .vigilado-card-content h4 {
+            font-size: 1.05rem;
+            color: var(--color-primary);
+            font-weight: 800;
+            margin-bottom: 0.4rem;
+            line-height: 1.3;
+        }
+
+        .vigilado-card-content p {
+            font-size: 0.85rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @media (max-width: 992px) {
+            .firm-trajectory-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .values-cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .firm-hero-img {
+                height: 320px;
+            }
+
+            .firm-badges-row {
+                grid-template-columns: 1fr;
+            }
+
+            .firm-pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vigilado-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .firm-pillar-card {
+                padding: 2rem 1.5rem;
+                flex-direction: column;
+            }
+
+            .vigilado-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main-header" class="glass-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../img/logo-abogados.png" alt="AV Consultores Jurídicos" class="logo-img">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="../servicios/index.html">Servicios <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="../servicios/derecho-civil/index.html">Derecho Civil</a></li>
+                            <li><a href="../servicios/derecho-laboral/index.html">Derecho Laboral</a></li>
+                            <li><a href="../servicios/derecho-administrativo/index.html">Derecho Administrativo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item is-current"><a href="../nuestra-firma/index.html" aria-current="page">Nuestra
+                            Firma</a></li>
+                    <li class="nav-item"><a href="../contacto/index.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../contacto/index.html" class="btn btn-primary cta-agenda">Agenda una Consulta</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Abrir menÃº"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <section style="background: url('../img/bogota_street_hero.jpg') center/cover no-repeat; padding: 180px 0 140px; position: relative;">
+        <!-- Capa de oscurecimiento (Degradado lateral) -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 45%, rgba(15, 23, 42, 0) 100%); z-index: 0;"></div>
+        
+        <div class="container" style="position: relative; z-index: 1; display: flex; align-items: center; min-height: 35vh;">
+            <div style="max-width: 700px;">
+                <!-- Badge -->
+                <div style="display: inline-flex; align-items: center; gap: 0.8rem; background: rgba(194, 147, 82, 0.15); padding: 0.6rem 1.2rem; border-radius: 50px; border: 1px solid rgba(194, 147, 82, 0.3); margin-bottom: 1.8rem;">
+                    <i class="fas fa-building-shield" style="color: #c4a47c;"></i>
+                    <span style="color: #c4a47c; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Nuestra Firma</span>
+                </div>
+                
+                <!-- Título -->
+                <h1 style="font-size: clamp(3rem, 5vw, 4.8rem); font-weight: 800; color: #ffffff; line-height: 1.1; margin-bottom: 1.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.3); letter-spacing: -1px;">Quiénes <span style="color: #c4a47c;">Somos</span></h1>
+                
+                <!-- Subtítulo -->
+                <p style="font-size: 1.25rem; color: #e2e8f0; line-height: 1.7; border-left: 3px solid #c4a47c; padding-left: 1.5rem; margin-bottom: 0; font-weight: 300;">Trayectoria, rigor jurídico y compromiso inquebrantable con la justicia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloque 1: Trayectoria y Excelencia -->
+    <section class="content-section" style="padding-top: 6rem; padding-bottom: 6rem;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                
+                <!-- Columna Izquierda: Textos -->
+                <div>
+                    <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(194, 147, 82, 0.1); color: var(--color-accent); padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-users"></i> Quiénes Somos
+                    </span>
+                    <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem); color: var(--color-primary); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1;">
+                        Sobre <span style="color: var(--color-accent);">Nosotros</span>
+                    </h2>
+                    
+                    <p style="font-size: 1.15rem; color: #475569; line-height: 1.8; margin-bottom: 1.5rem;">
+                        <strong>VA Consultores Jurídicos S.A.S.</strong> es una firma jurídica que brinda orientación, asesoría y acompañamiento legal a personas naturales y empresas, con soluciones claras, responsables y ajustadas a cada situación.
+                    </p>
+                    <p style="font-size: 1.15rem; color: #475569; line-height: 1.8; margin-bottom: 1.5rem; border-left: 3px solid var(--color-accent); padding-left: 1.5rem;">
+                        Nuestro Consultorio Jurídico Virtual facilita el acceso a una primera orientación legal, permitiendo conocer derechos, alternativas y posibles rutas de acción, sin barreras geográficas.
+                    </p>
+                    <p style="font-size: 1.15rem; color: #475569; line-height: 1.8; margin-bottom: 0;">
+                        Contamos con profesionales comprometidos con la ética, confidencialidad, responsabilidad y rigor jurídico, de conformidad con las normas que regulan el ejercicio de la abogacía en Colombia.
+                    </p>
+                </div>
+
+                <!-- Columna Derecha: Imagen Representativa -->
+                <div style="position: relative; display: flex; align-items: center; justify-content: center; background: white; border-radius: 24px; padding: 3rem; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid rgba(226, 232, 240, 0.8);">
+                    <img src="../img/logo-abogados.png" alt="Nuestra Firma" style="width: 100%; max-width: 350px; height: auto; object-fit: contain;">
+                    <!-- Elemento Decorativo -->
+                    <div style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); background: white; padding: 1.2rem 2rem; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 1rem; border-top: 4px solid var(--color-accent); white-space: nowrap;">
+                        <i class="fas fa-scale-balanced" style="font-size: 2rem; color: var(--color-accent);"></i>
+                        <div>
+                            <div style="font-weight: 800; font-size: 1.3rem; color: var(--color-primary); line-height: 1;">100%</div>
+                            <div style="color: #64748b; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-top: 0.2rem;">Compromiso Legal</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilares de Nuestro Servicio -->
+    <section class="content-section" style="background: #ffffff; padding-top: 6rem; padding-bottom: 7rem; position: relative; overflow: hidden; border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+        <!-- Efecto de brillo de fondo suave -->
+        <div style="position: absolute; top: -50%; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(194, 147, 82, 0.05) 0%, rgba(255, 255, 255, 0) 70%); border-radius: 50%; z-index: 0;"></div>
+        <div style="position: absolute; bottom: -30%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(15, 23, 42, 0.03) 0%, rgba(255, 255, 255, 0) 70%); border-radius: 50%; z-index: 0;"></div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+            <div style="text-align: center; margin-bottom: 4.5rem;">
+                <span style="color: var(--color-accent); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1rem; display: inline-block;">Nuestro Estándar</span>
+                <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem); color: var(--color-primary); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1;">Pilares de Nuestro <span style="color: var(--color-accent);">Servicio</span></h2>
+                <p style="font-size: 1.15rem; color: #64748b; max-width: 600px; margin: 0 auto; line-height: 1.7;">Nuestra práctica se fundamenta en principios sólidos que garantizan la excelencia en cada paso de su proceso legal.</p>
+            </div>
+
+            <div class="firm-pillars-grid">
+                
+                <!-- Pilar 1 (Azul) -->
+                <div class="firm-pillar-card pillar-featured">
+                    <div class="pillar-watermark">01</div>
+                    <div class="pillar-card-top">
+                        <div class="pillar-icon-box">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <span class="pillar-number">01</span>
+                    </div>
+                    <div class="pillar-content">
+                        <h3>Ética Profesional</h3>
+                        <p>Ejercicio del Derecho con absoluta integridad, reserva y lealtad procesal en cada caso asumido.</p>
+                    </div>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="firm-pillar-card">
+                    <div class="pillar-watermark">02</div>
+                    <div class="pillar-card-top">
+                        <div class="pillar-icon-box">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <span class="pillar-number">02</span>
+                    </div>
+                    <div class="pillar-content">
+                        <h3>Transparencia Total</h3>
+                        <p>Información precisa y sin falsas expectativas, con alcance y condiciones claros desde el diagnóstico preliminar.</p>
+                    </div>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="firm-pillar-card">
+                    <div class="pillar-watermark">03</div>
+                    <div class="pillar-card-top">
+                        <div class="pillar-icon-box">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="pillar-number">03</span>
+                    </div>
+                    <div class="pillar-content">
+                        <h3>Resultados Medibles</h3>
+                        <p>Enfoque orientado a mitigar riesgos, proteger derechos y consolidar metas jurídicas tangibles.</p>
+                    </div>
+                </div>
+
+                <!-- Pilar 4 (Azul) -->
+                <div class="firm-pillar-card pillar-featured">
+                    <div class="pillar-watermark">04</div>
+                    <div class="pillar-card-top">
+                        <div class="pillar-icon-box">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <span class="pillar-number">04</span>
+                    </div>
+                    <div class="pillar-content">
+                        <h3>Soluciones Reales</h3>
+                        <p>Estrategias legales prácticas y efectivas que responden a las necesidades concretas de su situación.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloque 2: Nuestros Valores -->
+    <section class="content-section firm-values-section">
+        <div class="container">
+            <div class="values-header text-center">
+                <span class="sub-label">Nuestro Norte</span>
+                <h2 class="firm-section-title">Misión y <span class="title-accent">Visión</span></h2>
+                <div class="title-divider"></div>
+                <p class="values-subtitle">Los pilares fundamentales que guían nuestro ejercicio profesional y la
+                    atención a cada usuario.</p>
+            </div>
+
+            <div class="values-cards-grid">
+                <!-- Valor 1: Misión -->
+                <div class="value-card">
+                    <div class="value-card-top">
+                        <div class="value-icon-box">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <span class="value-num">01</span>
+                    </div>
+                    <h3>Misión</h3>
+                    <p>Facilitar el acceso a soluciones legales mediante una atención profesional y cercana. Brindamos
+                        orientación inicial para que conozca sus derechos y alternativas con total transparencia.</p>
+                    <div class="value-highlight">
+                        <i class="fas fa-check"></i> Orientación clara y accesible
+                    </div>
+                </div>
+
+                <!-- Valor 2: Visión (Destacada) -->
+                <div class="value-card value-featured">
+                    <div class="value-card-top">
+                        <div class="value-icon-box icon-gold">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <span class="value-num">02</span>
+                    </div>
+                    <h3>Visión</h3>
+                    <p>Consolidarnos en Colombia como firma referente en servicios legales, integrando innovación
+                        tecnológica para ser el aliado estratégico de nuestros clientes y ampliar nuestra cobertura.</p>
+                    <div class="value-highlight">
+                        <i class="fas fa-check"></i> Innovación y alcance nacional
+                    </div>
+                </div>
+
+                <!-- Valor 3: Valores -->
+                <div class="value-card">
+                    <div class="value-card-top">
+                        <div class="value-icon-box">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <span class="value-num">03</span>
+                    </div>
+                    <h3>Valores</h3>
+                    <p>Desarrollamos nuestra actividad bajo los más altos estándares de ética, responsabilidad,
+                        confidencialidad, transparencia y rigor jurídico para asegurar su tranquilidad.</p>
+                    <div class="value-highlight">
+                        <i class="fas fa-check"></i> Ética y rigor profesional
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloque 3: Vigilado Por / Marco de Supervisión -->
+    <section class="content-section firm-vigilado-section">
+        <div class="container">
+            <div class="vigilado-header">
+                <span class="vigilado-badge-tag"><i class="fas fa-shield-halved"></i> Marco Institucional & Legal</span>
+                <h2 class="vigilado-title">Vigilado <span class="title-accent">por</span></h2>
+                <div class="title-divider"></div>
+                <p class="vigilado-lead-text">
+                    AV Consultores Jurídicos S.A.S. ejerce su actividad profesional en estricto cumplimiento del marco legal colombiano, los estatutos de la abogacía y bajo la vigilancia de las entidades y autoridades competentes. (Texto de muestra / espacio de prueba: Aquí puede detallar los números de registro, personerías jurídicas, resoluciones y entidades de vigilancia que supervisan la actividad de su firma).
+                </p>
+            </div>
+
+            <!-- Grilla Diagramada de 4 Entidades / Imágenes -->
+            <div class="vigilado-grid">
+                
+                <!-- ESPACIO IMAGEN 1: Rama Judicial -->
+                <div class="vigilado-card">
+                    <div class="vigilado-img-slot">
+                        <!-- Puedes cambiar la imagen en el src de abajo -->
+                        <img src="../img/Rama_Judicial_de_Colombia.png" alt="Rama Judicial de Colombia" class="vigilado-img">
+                    </div>
+                    <div class="vigilado-card-content">
+                        <span class="vigilado-status-chip"><i class="fas fa-check-circle" style="color: #10b981;"></i> Registro Oficial</span>
+                        <h4>Rama Judicial de Colombia</h4>
+                        <p>Consejo Superior de la Judicatura · Registro Nacional de Abogados</p>
+                    </div>
+                </div>
+
+                <!-- ESPACIO IMAGEN 2: Cámara de Comercio -->
+                <div class="vigilado-card">
+                    <div class="vigilado-img-slot">
+                        <!-- Puedes cambiar la imagen en el src de abajo -->
+                        <img src="../img/camaracomerbog_logo.jpg" alt="Cámara de Comercio" class="vigilado-img" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);">
+                    </div>
+                    <div class="vigilado-card-content">
+                        <span class="vigilado-status-chip"><i class="fas fa-check-circle" style="color: #10b981;"></i> Matrícula Activa</span>
+                        <h4>Cámara de Comercio</h4>
+                        <p>Registro Mercantil · Personería jurídica y centro de conciliación</p>
+                    </div>
+                </div>
+
+                <!-- ESPACIO IMAGEN 3: Superintendencia de Industria y Comercio (images.jpg) -->
+                <div class="vigilado-card">
+                    <div class="vigilado-img-slot">
+                        <img src="../img/images.jpg" alt="Superintendencia de Industria y Comercio" class="vigilado-img" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);">
+                    </div>
+                    <div class="vigilado-card-content">
+                        <span class="vigilado-status-chip"><i class="fas fa-check-circle" style="color: #10b981;"></i> Vigilancia & Control</span>
+                        <h4>Superintendencia de Industria y Comercio</h4>
+                        <p>Inspección, vigilancia mercantil y protección al consumidor</p>
+                    </div>
+                </div>
+
+                <!-- ESPACIO IMAGEN 4: Consejo Superior de la Judicatura (site_logo.png) -->
+                <div class="vigilado-card">
+                    <div class="vigilado-img-slot">
+                        <img src="../img/site_logo.png" alt="Consejo Superior de la Judicatura" class="vigilado-img">
+                    </div>
+                    <div class="vigilado-card-content">
+                        <span class="vigilado-status-chip"><i class="fas fa-check-circle" style="color: #10b981;"></i> Control Deontológico</span>
+                        <h4>Consejo Superior de la Judicatura</h4>
+                        <p>Vigilancia disciplinaria y ejercicio ético de la profesión jurídica</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- 6. FOOTER -->
+    <footer id="contacto" class="main-footer dark-bg">
+        <!-- Separador decorativo superior -->
+        <div class="footer-top-deco">
+            <span class="footer-deco-line"></span>
+            <span class="footer-deco-icon"><i class="fas fa-scale-balanced"></i></span>
+            <span class="footer-deco-line"></span>
+        </div>
+
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo footer-logo">
+                    <img src="../img/logo-abogados.png" alt="AV Consultores Jurídicos" class="logo-img">
+                </a>
+                <p class="footer-desc">Firma jurídica especializada en orientación, asesoría y acompañamiento legal a personas naturales y empresas, con soluciones claras y responsables.</p>
+                <div class="footer-brand-accent"></div>
+
+                <!-- Entidades de Vigilancia y Acreditación -->
+                <div class="footer-vigilado">
+                    <div class="footer-vigilado-header">
+                        <i class="fas fa-shield-halved footer-vigilado-icon" aria-hidden="true"></i>
+                        <span class="footer-vigilado-label">Vigilado y avalado por</span>
+                    </div>
+                    <div class="footer-vigilado-grid">
+                        <div class="footer-vigilado-card" title="Rama Judicial de Colombia · Consejo Superior de la Judicatura">
+                            <img src="../img/Rama_Judicial_de_Colombia.png" alt="Rama Judicial de Colombia" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Cámara de Comercio de Bogotá · Matrícula Mercantil">
+                            <img src="../img/camaracomerbog_logo.jpg" alt="Cámara de Comercio de Bogotá" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Superintendencia de Industria y Comercio · Vigilancia y Control">
+                            <img src="../img/images.jpg" alt="Superintendencia de Industria y Comercio" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Consejo Superior de la Judicatura · Registro Nacional de Abogados">
+                            <img src="../img/site_logo.png" alt="Consejo Superior de la Judicatura" class="footer-vigilado-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-nav-col">
+                <h3 class="footer-col-title">Navegación</h3>
+                <ul class="footer-links-list">
+                    <li><a href="../index.html#reglas-consultorio"><i class="fas fa-chevron-right"></i> Reglas del Consultorio</a></li>
+                    <li><a href="../index.html#servicios"><i class="fas fa-chevron-right"></i> Áreas de Trabajo</a></li>
+                    <li><a href="../index.html#sobre-nosotros"><i class="fas fa-chevron-right"></i> Quiénes Somos</a></li>
+                    <li><a href="../index.html#como-funciona"><i class="fas fa-chevron-right"></i> Cómo Funciona</a></li>
+                    <li><a href="../nuestra-firma/index.html"><i class="fas fa-chevron-right"></i> Nuestra Firma</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 class="footer-col-title">Contacto</h3>
+                <ul class="contact-list">
+                    <li>
+                        <div class="contact-list-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">Correo electrónico</span>
+                            <a href="mailto:avconsultores07@gmail.com">avconsultores07@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-list-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">Teléfono</span>
+                            <a href="tel:+570000000000">000 000 00 00</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-list-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">WhatsApp</span>
+                            <a href="https://wa.me/570000000000" target="_blank" rel="noopener">Escríbenos ahora</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 AV Consultores Jurídicos S.A.S. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de privacidad</a>
+                    <span>·</span>
+                    <a href="#">Términos de uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WIDGETS -->
+    <a href="https://wa.me/570000000000" class="whatsapp-float" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="../main.js"></script>
+</body>
+
+</html>

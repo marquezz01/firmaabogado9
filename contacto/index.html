@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Tu Firma Legal</title>
+    <meta name="description" content="Agenda una consulta o escríbenos. Estamos listos para atenderte por correo, teléfono o WhatsApp.">
+    <!-- Favicon / Ícono de pestaña y barra de navegación al buscar -->
+    <link rel="icon" type="image/x-icon" href="../img/logo-abogados-icono.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo-abogados-icono.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="contact-page">
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+    <header id="main-header" class="glass-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../img/logo-abogados.png" alt="AV Consultores Jurídicos" class="logo-img">
+            </a>
+            <nav class="main-nav" aria-label="Principal">
+                <ul class="nav-list" id="menu-principal">
+                    <li class="nav-item has-dropdown">
+                        <a href="../servicios/index.html">Servicios <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="../servicios/derecho-civil/index.html">Derecho Civil</a></li>
+                            <li><a href="../servicios/derecho-laboral/index.html">Derecho Laboral</a></li>
+                            <li><a href="../servicios/derecho-administrativo/index.html">Derecho Administrativo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../nuestra-firma/index.html">Nuestra Firma</a></li>
+                    <li class="nav-item is-current"><a href="../contacto/index.html" aria-current="page">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#formulario-contacto" class="btn btn-primary cta-agenda">Agenda una Consulta</a>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="inner-hero" aria-labelledby="contact-hero-title" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.7) 100%), url('../img/bogota_street_hero.jpg') center/cover no-repeat; border-bottom: none;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <p class="badge" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); display: inline-block; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem;">Estamos para ayudarte</p>
+            <h1 id="contact-hero-title" class="hero-title" style="color: white;">Ponte en <span class="title-accent" style="color: var(--color-accent);">Contacto</span></h1>
+            <p class="hero-subtitle" style="color: rgba(255,255,255,0.9);">Cuéntanos tu caso y te respondemos en un día hábil.</p>
+        </div>
+    </section>
+
+    <main id="contenido-principal" class="content-section">
+        <div class="container grid-2-cols">
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="contact-form-header">
+                    <h2 id="formulario-contacto">Envíanos un mensaje</h2>
+                    <p>Completa los campos. Los marcados con <span class="required-mark" aria-hidden="true">*</span> son obligatorios.</p>
+                </div>
+
+                <div class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+
+                <div class="form-group">
+                    <label class="form-label" for="contact-name">Nombre completo <span class="required-mark">*</span></label>
+                    <input class="form-control" type="text" id="contact-name" name="name" autocomplete="name" required maxlength="80" placeholder="Ana Pérez">
+                    <p class="form-error" id="contact-name-error">Ingresa tu nombre.</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="contact-email">Correo electrónico <span class="required-mark">*</span></label>
+                    <input class="form-control" type="email" id="contact-email" name="email" autocomplete="email" required placeholder="ana@correo.com">
+                    <p class="form-error" id="contact-email-error">Ingresa un correo válido.</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="contact-phone">Teléfono</label>
+                    <input class="form-control" type="tel" id="contact-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="000 000 00 00">
+                    <p class="form-hint">Opcional. Facilita que te contactemos más rápido.</p>
+                    <p class="form-error" id="contact-phone-error">Ingresa un teléfono válido.</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="contact-topic">Asunto <span class="required-mark">*</span></label>
+                    <select class="form-control" id="contact-topic" name="topic" required>
+                        <option value="">Selecciona un área</option>
+                        <option value="civil">Derecho Civil</option>
+                        <option value="laboral">Derecho Laboral</option>
+                        <option value="administrativo">Derecho Administrativo</option>
+                        <option value="consulta">Consulta general</option>
+                    </select>
+                    <p class="form-error" id="contact-topic-error">Selecciona un asunto.</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="contact-message">Mensaje <span class="required-mark">*</span></label>
+                    <textarea class="form-control" id="contact-message" name="message" rows="5" required minlength="20" maxlength="2000" placeholder="Describe brevemente tu consulta..."></textarea>
+                    <p class="form-hint">Mínimo 20 caracteres.</p>
+                    <p class="form-error" id="contact-message-error">Escribe un mensaje de al menos 20 caracteres.</p>
+                </div>
+
+                <div class="form-group form-consent">
+                    <input type="checkbox" id="contact-consent" name="consent" required>
+                    <label class="form-label" for="contact-consent">Acepto el tratamiento de mis datos para responder esta consulta. <span class="required-mark">*</span></label>
+                </div>
+                <p class="form-error" id="contact-consent-error">Debes aceptar para enviar el formulario.</p>
+
+                <button type="submit" class="btn btn-primary contact-submit" id="contact-submit">
+                    <span class="btn-spinner" aria-hidden="true"></span>
+                    <span class="btn-label">Enviar mensaje</span>
+                </button>
+            </form>
+
+            <aside class="contact-info-panel" aria-labelledby="datos-contacto-title">
+                <div class="contact-info-header">
+                    <span class="contact-info-label">Disponibles para ti</span>
+                    <h2 id="datos-contacto-title" class="contact-info-title">Datos de Contacto</h2>
+                    <div class="contact-info-divider"></div>
+                    <p class="contact-info-desc">Estamos listos para atenderte por cualquiera de estos medios. Elige el canal que te resulte más cómodo.</p>
+                </div>
+                <ul class="contact-cards-list">
+
+                    <li class="contact-card-item">
+                        <div class="contact-card-icon" aria-hidden="true">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-card-body">
+                            <span class="contact-card-label">Correo electrónico</span>
+                            <a href="mailto:avconsultores07@gmail.com" class="contact-card-value contact-card-link">avconsultores07@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="contact-card-item">
+                        <div class="contact-card-icon" aria-hidden="true">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-card-body">
+                            <span class="contact-card-label">Teléfono / WhatsApp</span>
+                            <a href="tel:+570000000000" class="contact-card-value contact-card-link">000 000 00 00</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="contact-hours">
+                    <h3>Horario de atención</h3>
+                    <dl>
+                        <dt>Lunes a viernes</dt>
+                        <dd>8:00 a. m. – 6:00 p. m.</dd>
+                        <dt>Sábados</dt>
+                        <dd>9:00 a. m. – 1:00 p. m.</dd>
+                        <dt>Domingos y festivos</dt>
+                        <dd>Cerrado</dd>
+                    </dl>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="contacto" class="main-footer dark-bg">
+        <!-- Separador decorativo superior -->
+        <div class="footer-top-deco">
+            <span class="footer-deco-line"></span>
+            <span class="footer-deco-icon"><i class="fas fa-scale-balanced"></i></span>
+            <span class="footer-deco-line"></span>
+        </div>
+
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo footer-logo">
+                    <img src="../img/logo-abogados.png" alt="AV Consultores Jurídicos" class="logo-img">
+                </a>
+                <p class="footer-desc">Firma jurídica especializada en orientación, asesoría y acompañamiento legal a personas naturales y empresas, con soluciones claras y responsables.</p>
+                <div class="footer-brand-accent"></div>
+
+                <!-- Entidades de Vigilancia y Acreditación -->
+                <div class="footer-vigilado">
+                    <div class="footer-vigilado-header">
+                        <i class="fas fa-shield-halved footer-vigilado-icon" aria-hidden="true"></i>
+                        <span class="footer-vigilado-label">Vigilado y avalado por</span>
+                    </div>
+                    <div class="footer-vigilado-grid">
+                        <div class="footer-vigilado-card" title="Rama Judicial de Colombia · Consejo Superior de la Judicatura">
+                            <img src="../img/Rama_Judicial_de_Colombia.png" alt="Rama Judicial de Colombia" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Cámara de Comercio de Bogotá · Matrícula Mercantil">
+                            <img src="../img/camaracomerbog_logo.jpg" alt="Cámara de Comercio de Bogotá" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Superintendencia de Industria y Comercio · Vigilancia y Control">
+                            <img src="../img/images.jpg" alt="Superintendencia de Industria y Comercio" class="footer-vigilado-logo">
+                        </div>
+                        <div class="footer-vigilado-card" title="Consejo Superior de la Judicatura · Registro Nacional de Abogados">
+                            <img src="../img/site_logo.png" alt="Consejo Superior de la Judicatura" class="footer-vigilado-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-nav-col">
+                <h3 class="footer-col-title">Navegación</h3>
+                <ul class="footer-links-list">
+                    <li><a href="../index.html#reglas-consultorio"><i class="fas fa-chevron-right"></i> Reglas del Consultorio</a></li>
+                    <li><a href="../index.html#servicios"><i class="fas fa-chevron-right"></i> Áreas de Trabajo</a></li>
+                    <li><a href="../index.html#sobre-nosotros"><i class="fas fa-chevron-right"></i> Quiénes Somos</a></li>
+                    <li><a href="../index.html#como-funciona"><i class="fas fa-chevron-right"></i> Cómo Funciona</a></li>
+                    <li><a href="../nuestra-firma/index.html"><i class="fas fa-chevron-right"></i> Nuestra Firma</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 class="footer-col-title">Contacto</h3>
+                <ul class="contact-list">
+                    <li>
+                        <div class="contact-list-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">Correo electrónico</span>
+                            <a href="mailto:avconsultores07@gmail.com">avconsultores07@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-list-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">Teléfono</span>
+                            <a href="tel:+570000000000">000 000 00 00</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-list-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-list-info">
+                            <span class="contact-list-label">WhatsApp</span>
+                            <a href="https://wa.me/570000000000" target="_blank" rel="noopener">Escríbenos ahora</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 AV Consultores Jurídicos S.A.S. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de privacidad</a>
+                    <span>·</span>
+                    <a href="#">Términos de uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/570000000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span class="wa-tooltip">¡Escríbenos Ya!</span>
+    </a>
+
+    <script src="../main.js"></script>
+</body>
+</html>
